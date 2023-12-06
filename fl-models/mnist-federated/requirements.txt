@@ -1,4 +1,3 @@
-flwr
-tensorflow>=2.7.0
-keras>=2.7.0
-numpy
+flwr~=1.4.0
+openml~=0.13.1
+concrete-ml
