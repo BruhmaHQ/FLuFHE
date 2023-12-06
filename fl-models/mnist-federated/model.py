@@ -3,6 +3,7 @@ import tensorflow as tf
 from tensorflow import keras
 import sys
 
+
 # Load and compile Keras model
 model = keras.Sequential([
     keras.layers.Flatten(input_shape=(28,28)),
