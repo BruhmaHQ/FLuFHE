@@ -1,6 +1,8 @@
 # FLuFHE - Federated Leaning using FHE
 FLuFHE - Federated Learning using FHE to use decentralized model training and protect it against inference and stealth attacks.
 
+FLuFHE leverages the power of Fully Homomorphic Encryption (FHE) to address security and privacy concerns in Federated Learning (FL). By performing aggregation on encrypted models, FLuFHE prevents the aggregator from accessing the actual model parameters, protecting against both inference attacks and stealth attacks.
+
 ## Federated Learning 
 Explain advantages of FL
 
