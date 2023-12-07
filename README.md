@@ -1,11 +1,15 @@
-# FLuFHE - Federated Leaning using FHE
-![Alt text](./demo/pic4.png "High Level Architecture")
-FLuFHE - Federated Learning using FHE to use decentralized model training and protect it against inference and stealth attacks.
+## FLuFHE - Federated Leaning using FHE
 
+
+![Alt text](./demo/pic4.png "High Level Architecture")
+
+---
+> FLuFHE - Federated Learning using FHE to use decentralized model training and protect it against inference and stealth attacks.
 FLuFHE is an improvement built for federated learning (a way to compute ml models in a decentralised way). Federated learning models have a vulnerability that aggregator functions have access to weights and bias which is a security risk. To mitigate this we have used Fully Homomorphic encryption. FHE allows us to do operations on encrypted data leveraging this we have created encrypted weights and biases for local models which aggregators aggregates using FHE and never has access to the the original weights and bias . This makes it secure. To address compute limitations and onchain limitations we have provided an off chain FHE demo using concrete-ml which showcases how complex aggegration methods can be implemented using FHE. This offchain compute then can be verified in a number of ways like using RISC 0 bonsai relayer and Application-specific rollups with a Linux runtime like cartesi
 ---
 
 ![Alt text](./demo/pic1.jpeg "High Level Architecture")
+
 FLuFHE leverages the power of Fully Homomorphic Encryption (FHE) to address security and privacy concerns in Federated Learning (FL). By performing aggregation on encrypted models, FLuFHE prevents the aggregator from accessing the actual model parameters, protecting against both inference attacks and stealth attacks.
 
 
