@@ -18,9 +18,22 @@ import { useEffect, useState } from "react";
 import TrainInit from "./pages/Init";
 import Dashboard from "./pages/Dashboard";
 import Train from "./pages/TrainModels";
+import { init } from "./utils/fhevm";
 
 function App() {
   const [contract, setContract] = useState<any>(null);
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  useEffect(() => {
+    init()
+      .then(() => {
+        setIsInitialized(true);
+        console.log("yerd");
+      })
+      .catch(() => setIsInitialized(false));
+  }, []);
+
+  if (!isInitialized) return null;
   return (
     <div className="App">
       <div className="mt-[80px]">

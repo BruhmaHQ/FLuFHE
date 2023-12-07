@@ -66,7 +66,7 @@ function Train(props: any) {
   };
 
   const FLModelConfig = {
-    address: "", // whatever will come after deploying
+    address: props.contract, // whatever will come after deploying
     abi: FluFLEConfig.abi,
     chainId: Inco.id,
   };
@@ -75,7 +75,7 @@ function Train(props: any) {
     ...FLModelConfig,
     functionName: "addBulkAddresses",
     //@ts-ignore
-    args: allowlist.split(","),
+    args: allowlist.split(','),
   });
 
   const {
@@ -136,7 +136,7 @@ function Train(props: any) {
         type={"text"}
         onChange={(e) => setAllowlist(e.target.value)}
         value={allowlist}
-        className={` my-[10px] w-full placeholder:text-[#D3D4D5] flex-grow rounded-[6px] border-primary-1  px-[12px] py-[6px] text-[14px] font-[400px] border-[1px]`}
+        className={` my-[10px] w-full placeholder:text-zinc-500 text-zinc-800 flex-grow rounded-[6px] border-primary-1  px-[12px] py-[6px] text-[14px] font-[400px] border-[1px]`}
       />{" "}
       <Button type="button" mode="dark" onClick={addToAllowist}>
         <div className="flex flex-row gap-[10px] items-center ">
