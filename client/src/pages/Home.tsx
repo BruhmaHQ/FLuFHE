@@ -25,18 +25,22 @@ export default function Home(props: any) {
           Fully Homomorphic Encryption
         </p>
         <div className="flex justify-around mt-[4rem] flex-row w-[20vw] mx-auto">
-          <Button type="button" mode="green">
-            <div className="flex flex-row gap-[10px] items-center ">
-              <GrMoney className="text-brandGrey h-[16px]" height={16} />{" "}
-              <h1 className="text-brandGrey font-semibold ">Train Models</h1>
-            </div>
-          </Button>
-          <Button type="button" mode="dark">
-            <div className="flex flex-row gap-[10px] items-center ">
-              <MdPersonSearch className="text-[#EDEDED] h-[16px]" />
-              <h1 className="text-[#EDEDED] font-semibold">Dashboard</h1>
-            </div>
-          </Button>
+          <Link href="/train/init">
+            <Button type="button" mode="green">
+              <div className="flex flex-row gap-[10px] items-center ">
+                <GrMoney className="text-brandGrey h-[16px]" height={16} />{" "}
+                <h1 className="text-brandGrey font-semibold ">Train Models</h1>
+              </div>
+            </Button>
+          </Link>
+          <Link href="/dashboard">
+            <Button type="button" mode="dark">
+              <div className="flex flex-row gap-[10px] items-center ">
+                <MdPersonSearch className="text-[#EDEDED] h-[16px]" />
+                <h1 className="text-[#EDEDED] font-semibold">Dashboard</h1>
+              </div>
+            </Button>
+          </Link>
         </div>
       </div>
 

@@ -17,7 +17,7 @@ import { Inco } from "./utils/IncoChainConfig";
 import { useEffect, useState } from "react";
 import TrainInit from "./pages/Init";
 import Dashboard from "./pages/Dashboard";
-import Train from "./pages/Train";
+import Train from "./pages/TrainModels";
 
 function App() {
   const [contract, setContract] = useState<any>(null);

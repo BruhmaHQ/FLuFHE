@@ -4,6 +4,7 @@ import Button from "../components/Button";
 import { Hash } from "viem";
 import {
   useAccount,
+  useContractWrite,
   usePrepareContractWrite,
   useWaitForTransaction,
   useWalletClient,
@@ -57,7 +58,7 @@ function Train(props: any) {
     const hash = await walletClient.deployContract({
       abi: FluFLEConfig.abi,
       account: address,
-      args: [false],
+      args: [true], //true to allow allowlisting
       bytecode: `0x${FluFLEConfig.bytocode}`,
     });
     console.log(hash);
@@ -72,20 +73,23 @@ function Train(props: any) {
 
   const { config: FlData } = usePrepareContractWrite({
     ...FLModelConfig,
-    functionName: "a",
-    args: ["0x", "0x"],
+    functionName: "addBulkAddresses",
+    //@ts-ignore
+    args: allowlist.split(","),
   });
 
-  // const {
-  //   data: data,
-  //   write: add,
-  //   isLoading: isEncyLoading,
-  //   isSuccess: IsEncyStarted,
-  //   error: burnErrorCredit,
-  // } = useContractWrite(FlData);
+  const {
+    data: contactData,
+    write: addToAllolist,
+    isLoading: isEncyLoading,
+    isSuccess: IsEncyStarted,
+    error: burnErrorCredit,
+  } = useContractWrite(FlData);
 
   const addToAllowist = () => {
-    const array = allowlist.split(",");
+    console.log("here");
+    addToAllolist?.();
+    console.log("here");
   };
 
   useEffect(() => {

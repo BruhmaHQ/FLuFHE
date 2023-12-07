@@ -43,7 +43,7 @@ function Nav(props: any) {
             <GrMoney /> Train
           </li>
         </ActiveLink>
-        <ActiveLink href="/dash">
+        <ActiveLink href="/dashboard">
           <li className="cursor-pointer hover:text-brandGreen flex gap-2 text-lg cal-font items-center">
             <MdPersonSearch /> Dashboard
             {/* <MdWorkspacePremium /> Hire */}
