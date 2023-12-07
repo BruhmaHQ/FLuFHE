@@ -1,13 +1,19 @@
-# Sample Hardhat Project
+# FLuFHE Smart Contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+FLuFHE (Federated Learning using Fully Homomorphic Encryption ) leverages Inco Network which is a FHEvm which enalbes computing FHE cryptography natively on Chain
 
-Try running some of the following tasks:
+## Features
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+- **Encrypted Weight Storage:** Participants can submit encrypted weights using the `addEncrypyedValue` function.
+- **Aggregation:** The contract provides a method (`AggregateEncryptedWeights`) to securely aggregate the encrypted weights.
+- **Allowlisting:** Addresses can be allowlisted to control participation using the `addToAllowlist` function.
+
+
+## Usage
+
+1. Deploy the FLuFHE contract to the Inco blockchain.
+2. Participants add encrypted weights using the `addEncrypyedValue` function.
+3. Allowlist specific addresses using `addToAllowlist` or in batches with `addBulkAddresses`.
+4. Aggregate encrypted weights securely using `AggregateEncryptedWeights`.
+
+
