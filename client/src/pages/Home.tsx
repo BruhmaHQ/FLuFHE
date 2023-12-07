@@ -15,7 +15,7 @@ export default function Home(props: any) {
           <img src="./flufhe.png" alt="" className="w-full mx-auto" />
         </h1>
         <h1 className="text-[#EDEDED]  text-[40px] text-center mt-8 ">
-          <span className="text-brandGreen">F</span>ededarted{" "}
+          <span className="text-brandGreen">F</span>ederated{" "}
           <span className="text-brandGreen">L</span>earning{" "}
           <span className="text-brandGreen">u</span>sing
           <span className="text-brandGreen"> FHE</span>

@@ -5,6 +5,7 @@ import { MdWorkspacePremium } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { Link, useRoute } from "wouter";
 import { MdPersonSearch } from "react-icons/md";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export const ActiveLink = (props: any) => {
   const [isActive] = useRoute(props.href);
@@ -37,24 +38,27 @@ function Nav(props: any) {
       <div className=""></div>
       <div className=""></div>
       <ul className="flex gap-10 items-center">
-        <ActiveLink href="/bounty">
+        <ActiveLink href="/train">
           <li className="cursor-pointer hover:text-brandGreen flex gap-2 text-lg cal-font items-center">
             <GrMoney /> Train
           </li>
         </ActiveLink>
-        <ActiveLink href="/hire">
+        <ActiveLink href="/dash">
           <li className="cursor-pointer hover:text-brandGreen flex gap-2 text-lg cal-font items-center">
             <MdPersonSearch /> Dashboard
             {/* <MdWorkspacePremium /> Hire */}
           </li>
         </ActiveLink>
       </ul>
-      <Button
+      <div className=""></div>
+      <ConnectButton />
+      {/* <Button
         type="button"
         mode="green"
         disabled={props.connecting}
         onClick={props.connectWalletOnClick}
-      >
+      >     <div className=""> 
+
         <div className="flex flex-row gap-[10px] items-center ">
           <IoWallet className="text-brandGrey h-[16px]" height={16} />{" "}
           <p className="text-brandGrey font-semibold cal-font">
@@ -65,7 +69,7 @@ function Nav(props: any) {
               : "Connect"}
           </p>
         </div>
-      </Button>
+      </Button> */}
     </header>
   );
 }
