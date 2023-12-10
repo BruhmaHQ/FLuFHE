@@ -25,6 +25,9 @@ body {
   display: none;
 }
 
+iframe {
+  display: none;
+}
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
   -ms-overflow-style: none;
